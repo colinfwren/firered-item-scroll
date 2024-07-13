@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Pokemon Fire Red';
+    src: url('Pokemon-Fire-Red.woff2') format('woff2'),
+        url('Pokemon-Fire-Red.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Pokemon Fire Red';
+    font-size: 64px;
+}
+
+.item-screen {
+    width: 960px;
+    height: 640px;
+    padding-top: 4px;
+    background: repeating-linear-gradient(
+        0deg, 
+        #d68c73,
+        #d68c73 4px,
+        #ffad94 4px,
+        #ffad94 8px
+    );
+}
+
+.bag {
+    margin-left: 12px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+    height: 436px;
+    background-image: url("img/ui-background.png");
+    display: grid;
+    grid-template-columns: 316px 568px;
+    gap: 60px;
+    timeline-scope: --item-list-scroll-timeline;
+}
+
+.bag-section-image {
+    height: 276px;
+    width: 316px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 44px;
+}
+
+.bag-section-image::after {
+    height: 256px;
+    width: 256px;
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url('img/key-items.png');
+    animation: item-bag-image linear;
+    animation-timeline: --item-list-scroll-timeline;
+    /* animation-timing-function: steps(3); */
+    /* animation-range: contain 0% contain 100%; */
+}
+
+.bag-section-image img {
+    width: 232px;
+}
+
+.bag-section-title {
+    padding-left: 24px;
+    padding-right: 16px;
+    padding-top: 18px;
+    width: 280px;
+    height: 98px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 4px 4px 0 #636363;
+}
+.bag-section-title::before {
+    content: 'KEY ITEMS';
+    animation: item-bag-title linear;
+    animation-timeline: --item-list-scroll-timeline;
+}
+
+.item-list {
+    margin-top: 32px;
+    color: #606060;
+    text-shadow: 4px 4px 0 #d0d0c8;
+    height: 364px;
+    overflow-y: scroll;
+    width: 540px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-timeline: --item-list-scroll-timeline y;
+}
+.item-list::-webkit-scrollbar {
+    display: none;
+}
+
+.item-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid; 
+    grid-auto-rows: 64px; 
+    grid-template-columns: 1fr; 
+    gap: 8px 0px; 
+    width: 504px;
+}
+
+.item-list li::after {
+    display: block;
+    height: 8px;
+    width: 504px;
+    content: '';
+    /* background-image: linear-gradient(to right, #efe7ad 50%, transparent 50%), linear-gradient(to right, #efe7ad 50%, transparent 50%);
+    background-position: left bottom;
+    background-repeat: repeat-x, repeat-x;
+    background-size: 24px 8px, 24px 8px; */
+    background: repeating-linear-gradient(to right, #efe7ad, #efe7ad 24px, #efe7ad 24px,#ffffce 24px, #ffffce 32px);
+    margin-top: -12px;
+}
+
+@keyframes item-bag-image {
+    0% {
+        background-image: url('img/items.png');
+    }
+    45% {
+        background-image: url('img/items.png');
+    }
+    46% {
+        background-image: url('img/pokeballs.png');
+    }
+    52% {
+        background-image: url('img/pokeballs.png');
+    }
+    53% {
+        background-image: url('img/key-items.png');
+    }
+    100% {
+        background-image: url('img/key-items.png');
+    }
+}
+
+@keyframes item-bag-title {
+    0% {
+        content: 'ITEMS';
+    }
+    45% {
+        content: 'ITEMS';
+    }
+    46% {
+        content: 'POKe BALLS';
+    }
+    52% {
+        content: 'POKe BALLS';
+    }
+    53% {
+        content: 'KEY ITEMS';
+    }
+    100% {
+        content: 'KEY ITEMS';
+    }
+}

@@ -14,7 +14,7 @@ body {
 
 .item-screen {
     width: 960px;
-    height: 640px;
+    height: 440px;
     padding-top: 4px;
     background: repeating-linear-gradient(
         0deg, 
@@ -66,7 +66,7 @@ body {
 .bag-section-title {
     padding-left: 24px;
     padding-right: 16px;
-    padding-top: 18px;
+    padding-top: 28px;
     width: 280px;
     height: 98px;
     text-align: center;
@@ -110,12 +110,7 @@ body {
     height: 8px;
     width: 504px;
     content: '';
-    /* background-image: linear-gradient(to right, #efe7ad 50%, transparent 50%), linear-gradient(to right, #efe7ad 50%, transparent 50%);
-    background-position: left bottom;
-    background-repeat: repeat-x, repeat-x;
-    background-size: 24px 8px, 24px 8px; */
     background: repeating-linear-gradient(to right, #efe7ad, #efe7ad 24px, #efe7ad 24px,#ffffce 24px, #ffffce 32px);
-    margin-top: -12px;
 }
 
 @keyframes item-bag-image {

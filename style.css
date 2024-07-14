@@ -55,8 +55,6 @@ body {
     background-image: url('img/key-items.png');
     animation: item-bag-image linear;
     animation-timeline: --item-list-scroll-timeline;
-    /* animation-timing-function: steps(3); */
-    /* animation-range: contain 0% contain 100%; */
 }
 
 .bag-section-image img {
